@@ -23,6 +23,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Fetch README from main skardi repo
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/SkardiLabs/skardi/main/README.md -o README.md
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
