@@ -61,11 +61,7 @@ const config = {
             sidebarId: 'docsSidebar',
             position: 'left',
             label: 'Docs',
-          },
-          {
-            href: 'https://skardilabs.github.io/skardi/api',
-            label: 'API Reference',
-            position: 'left',
+            className: 'navbar-docs-link',
           },
           {
             href: 'https://github.com/SkardiLabs/skardi',
@@ -89,7 +85,6 @@ const config = {
           {
             title: 'More',
             items: [
-              {label: 'API Reference', href: 'https://skardilabs.github.io/skardi/api'},
               {label: 'GitHub', href: 'https://github.com/SkardiLabs/skardi'},
               {label: 'Releases', href: 'https://github.com/SkardiLabs/skardi/releases'},
             ],

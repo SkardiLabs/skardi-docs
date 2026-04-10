@@ -1,23 +1,47 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .heroBanner {
-  padding: 4rem 0;
+  padding: 5rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #000000 0%, #0a5c2a 100%);
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 3rem 1.5rem;
   }
+}
+
+.heroLogo {
+  max-width: 520px;
+  width: 80%;
+  margin-bottom: 1.5rem;
+}
+
+.heroTagline {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
 }
 
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+}
+
+/* Solid gradient pill — Get Started */
+.btnPrimary {
+  background: linear-gradient(90deg, #2ec47a, #1a8fe0);
+  border: none;
+  color: #fff !important;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.88;
+  color: #fff !important;
 }
