@@ -27,6 +27,11 @@
   background: linear-gradient(90deg, #000000 0%, #0a5c2a 100%);
 }
 
+/* Hide "Edit this page" button site-wide */
+.theme-edit-this-page {
+  display: none;
+}
+
 /* Bold "Docs" navbar link */
 .navbar-docs-link {
   font-weight: 700;

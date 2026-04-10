@@ -57,13 +57,6 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'docsSidebar',
-            position: 'left',
-            label: 'Docs',
-            className: 'navbar-docs-link',
-          },
-          {
             href: 'https://github.com/SkardiLabs/skardi',
             label: 'GitHub',
             position: 'right',
