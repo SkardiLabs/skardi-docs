@@ -15,9 +15,6 @@ function HomepageHeader() {
           <Link className={clsx('button button--lg', styles.btnPrimary)} to="/docs/intro">
             Get Started
           </Link>
-          <Link className={clsx(styles.btnApiRef, 'button button--lg')} href="https://skardilabs.github.io/skardi/api">
-            API Reference
-          </Link>
         </div>
       </div>
     </header>
