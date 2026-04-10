@@ -39,8 +39,11 @@ for (const line of README.split('\n')) {
 }
 if (heading) sections[heading] = lines.join('\n').trimEnd();
 
-// Intro: everything before the first ## heading
-const intro = README.split(/\n## /)[0].trimEnd();
+// Intro: everything before the first ## heading, with the HTML header block stripped
+const intro = README.split(/\n## /)[0]
+  .replace(/<div[\s\S]*?<\/div>/gi, '')
+  .trimStart()
+  .trimEnd();
 
 // Helper to write a doc file
 function write(relPath, frontmatter, content) {
