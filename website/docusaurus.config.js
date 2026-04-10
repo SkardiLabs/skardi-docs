@@ -50,10 +50,12 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'Skardi',
+        title: '',
         logo: {
           alt: 'Skardi Logo',
           src: 'img/logo.png',
+          href: 'https://github.com/SkardiLabs/skardi',
+          target: '_blank',
         },
         items: [
           {
