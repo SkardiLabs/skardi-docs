@@ -45,20 +45,3 @@
   opacity: 0.88;
   color: #fff !important;
 }
-
-/* Text-only link — API Reference */
-.btnApiRef {
-  background: transparent;
-  border: none;
-  color: #5dd9a0 !important;
-  font-weight: 600;
-  text-decoration: none;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  transition: color 0.2s;
-}
-
-.btnApiRef:hover {
-  color: #a8f0cf !important;
-  background: transparent;
-}
