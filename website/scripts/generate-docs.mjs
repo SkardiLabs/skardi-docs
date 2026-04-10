@@ -55,7 +55,7 @@ function write(relPath, frontmatter, content) {
 
 // Map sections to files
 write('intro.md',
-  'sidebar_position: 1\nslug: /intro',
+  'sidebar_position: 1\nslug: /intro\ntitle: Intro',
   intro);
 
 write('installation.md',

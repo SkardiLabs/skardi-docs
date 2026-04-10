@@ -37,13 +37,13 @@
   font-weight: 700;
 }
 
-/* Doc page background — soft green-tinted off-white */
+/* Doc page background */
 [data-theme='light'] .main-wrapper {
-  background: linear-gradient(160deg, #f0faf4 0%, #eaf4fb 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
 }
 
 [data-theme='dark'] .main-wrapper {
-  background: linear-gradient(160deg, #0d1f15 0%, #0d1a26 100%);
+  background: linear-gradient(180deg, #1a1a1a 0%, #111111 100%);
 }
 
 [data-theme='dark'] {
