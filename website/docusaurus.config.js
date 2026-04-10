@@ -12,10 +12,10 @@ const config = {
   },
 
   url: 'https://skardilabs.github.io',
-  baseUrl: '/skardi/',
+  baseUrl: '/skardi-docs/',
 
   organizationName: 'SkardiLabs',
-  projectName: 'skardi',
+  projectName: 'skardi-docs',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
