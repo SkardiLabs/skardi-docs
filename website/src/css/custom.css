@@ -24,7 +24,21 @@
 
 /* Navbar gradient bar */
 .navbar {
-  background: linear-gradient(90deg, #0f4c2a 0%, #0d3d5c 100%);
+  background: linear-gradient(90deg, #0a6e3a 0%, #0d4a6e 100%);
+}
+
+/* Bold "Docs" navbar link */
+.navbar-docs-link {
+  font-weight: 700;
+}
+
+/* Doc page background — soft green-tinted off-white */
+[data-theme='light'] .main-wrapper {
+  background: linear-gradient(160deg, #f0faf4 0%, #eaf4fb 100%);
+}
+
+[data-theme='dark'] .main-wrapper {
+  background: linear-gradient(160deg, #0d1f15 0%, #0d1a26 100%);
 }
 
 [data-theme='dark'] {
