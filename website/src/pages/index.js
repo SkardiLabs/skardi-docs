@@ -12,7 +12,7 @@ function HomepageHeader() {
         <img src="/skardi-docs/img/logo.png" alt="Skardi" className={styles.heroLogo} />
         <p className={styles.heroTagline}>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link className={clsx('button button--lg', styles.btnPrimary)} to="/docs/intro">
+          <Link className={clsx('button button--lg', styles.btnPrimary)} to="/docs/installation">
             Get Started
           </Link>
         </div>
