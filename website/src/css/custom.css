@@ -16,15 +16,16 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.08);
 
-  /* Navbar gradient */
-  --ifm-navbar-background-color: #0f4c2a;
-  --ifm-navbar-link-color: #d4f5e5;
-  --ifm-navbar-link-hover-color: #ffffff;
+  /* Navbar */
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-link-color: #1e3a5f;
+  --ifm-navbar-link-hover-color: #1a6ed8;
 }
 
 /* Navbar gradient bar */
 .navbar {
-  background: linear-gradient(90deg, #000000 0%, #0a5c2a 100%);
+  background: linear-gradient(90deg, #ffffff 0%, #bfdbfe 100%);
+  box-shadow: 0 1px 4px rgba(30, 58, 100, 0.1);
 }
 
 /* Hide "Edit this page" button site-wide */
@@ -39,11 +40,55 @@
 
 /* Doc page background */
 [data-theme='light'] .main-wrapper {
-  background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #bfdbfe 100%);
+}
+
+/* Light mode — override background color variable and make all doc panels transparent */
+[data-theme='light'] {
+  --ifm-background-color: transparent;
+  --ifm-background-surface-color: transparent;
+}
+
+[data-theme='light'] .docSidebarContainer,
+[data-theme='light'] .theme-doc-sidebar-container,
+[data-theme='light'] .menu,
+[data-theme='light'] .docItemContainer,
+[data-theme='light'] .col.docItemCol,
+[data-theme='light'] article,
+[data-theme='light'] .theme-doc-markdown,
+[data-theme='light'] .container,
+[data-theme='light'] .row,
+[data-theme='light'] .docPage__5DB,
+[data-theme='light'] main {
+  background: transparent !important;
 }
 
 [data-theme='dark'] .main-wrapper {
   background: linear-gradient(180deg, #1a1a1a 0%, #111111 100%);
+}
+
+/* Footer — compact */
+.footer {
+  padding: 0.75rem 1rem;
+}
+
+.footer__links {
+  margin-bottom: 0.4rem;
+}
+
+.footer__title {
+  font-size: 0.75rem;
+  margin-bottom: 0.2rem;
+}
+
+.footer__item {
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+.footer__copyright {
+  font-size: 0.65rem;
+  margin-top: 0.4rem;
 }
 
 [data-theme='dark'] {

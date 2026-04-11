@@ -51,10 +51,6 @@ const config = {
       },
       navbar: {
         title: 'Skardi',
-        logo: {
-          alt: 'Skardi Logo',
-          src: 'img/logo.png',
-        },
         items: [
           {
             href: 'https://github.com/SkardiLabs/skardi',
