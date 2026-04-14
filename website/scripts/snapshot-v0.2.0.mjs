@@ -69,8 +69,8 @@ const DOC_MAP = {
 
 // Asset paths copied into website/static/img/ — see snapshot README.
 const ASSET_MAP = {
-  'asset/logo.png': '/img/skardi-logo.png',
-  'asset/architecture.png': '/img/skardi-architecture.png',
+  'asset/logo.png': '/skardi-docs/img/skardi-logo.png',
+  'asset/architecture.png': '/skardi-docs/img/skardi-architecture.png',
 };
 
 function resolveRelative(baseDir, rel) {
@@ -220,7 +220,7 @@ mkdirSync(DEST, { recursive: true });
 write(
   'intro.md',
   'sidebar_position: 1\nslug: /intro\ntitle: Intro',
-  `# Skardi\n\n<p align="center"><img src="/img/skardi-logo.png" alt="Skardi" width="600" /></p>\n\n${introTransformed}\n\n## Key Features\n\n${section('Key Features')}\n\n## Cloud (Sealos)\n\n${section('Cloud (Sealos)')}\n\n## Architecture\n\n<p align="center"><img src="/img/skardi-architecture.png" alt="Skardi Architecture" width="800" /></p>`,
+  `# Skardi\n\n<p align="center"><img src="/skardi-docs/img/skardi-logo.png" alt="Skardi" width="600" /></p>\n\n${introTransformed}\n\n## Key Features\n\n${section('Key Features')}\n\n## Cloud (Sealos)\n\n${section('Cloud (Sealos)')}\n\n## Architecture\n\n<p align="center"><img src="/skardi-docs/img/skardi-architecture.png" alt="Skardi Architecture" width="800" /></p>`,
 );
 
 write(
