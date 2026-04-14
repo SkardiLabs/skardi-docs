@@ -5,7 +5,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Skardi',
   tagline: 'SQL across anything: query, join, and aggregate over local files, databases, S3, and vector stores — or turn any SQL into a parameterized HTTP API, zero application code required, written in Rust, powered by Apache Datafusion.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.svg',
 
   future: {
     v4: true,
@@ -64,6 +64,10 @@ const config = {
       },
       navbar: {
         title: 'Skardi',
+        logo: {
+          alt: 'Skardi Logo',
+          src: 'img/logo.svg',
+        },
         items: [
           {
             type: 'docsVersionDropdown',
