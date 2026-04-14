@@ -6,7 +6,7 @@ title: Intro
 
 # Skardi
 
-<p align="center"><img src="/img/skardi-logo.png" alt="Skardi" width="600" /></p>
+<p align="center"><img src="/skardi-docs/img/skardi-logo.png" alt="Skardi" width="600" /></p>
 
 Skardi runs federated SQL across files, databases, object stores, and vector stores — and turns any query into a parameterized REST API with no application code.
 
