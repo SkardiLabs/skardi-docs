@@ -33,6 +33,16 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           editUrl: 'https://github.com/SkardiLabs/skardi/tree/main/website/',
+          lastVersion: '0.1.1',
+          versions: {
+            current: {
+              label: 'Next',
+              path: 'next',
+            },
+            '0.1.1': {
+              label: '0.1.1',
+            },
+          },
         },
         blog: false,
         theme: {
@@ -52,6 +62,10 @@ const config = {
       navbar: {
         title: 'Skardi',
         items: [
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+          },
           {
             href: 'https://github.com/SkardiLabs/skardi',
             label: 'GitHub',
