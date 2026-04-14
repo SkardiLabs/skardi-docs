@@ -4,8 +4,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Skardi',
-  tagline: 'The declarative data runtime for AI and agents powered by Rust and Apache DataFusion.',
-  favicon: 'img/favicon.ico',
+  tagline: 'SQL across anything: query, join, and aggregate over local files, databases, S3, and vector stores — or turn any SQL into a parameterized HTTP API, zero application code required, written in Rust, powered by Apache Datafusion.',
+  favicon: 'img/logo.svg',
 
   future: {
     v4: true,
@@ -33,6 +33,19 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           editUrl: 'https://github.com/SkardiLabs/skardi/tree/main/website/',
+          lastVersion: '0.2.0',
+          versions: {
+            current: {
+              label: 'Next',
+              path: 'next',
+            },
+            '0.2.0': {
+              label: '0.2.0',
+            },
+            '0.1.1': {
+              label: '0.1.1',
+            },
+          },
         },
         blog: false,
         theme: {
@@ -51,7 +64,15 @@ const config = {
       },
       navbar: {
         title: 'Skardi',
+        logo: {
+          alt: 'Skardi Logo',
+          src: 'img/logo.svg',
+        },
         items: [
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+          },
           {
             href: 'https://github.com/SkardiLabs/skardi',
             label: 'GitHub',
@@ -67,7 +88,7 @@ const config = {
             items: [
               {label: 'Getting Started', to: '/docs/intro'},
               {label: 'CLI', to: '/docs/cli'},
-              {label: 'Server', to: '/docs/server/overview'},
+              {label: 'Server', to: '/docs/server'},
               {label: 'Data Sources', to: '/docs/data-sources/overview'},
             ],
           },
