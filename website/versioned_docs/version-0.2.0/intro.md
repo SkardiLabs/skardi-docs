@@ -39,4 +39,4 @@ The fastest way to get started is with **[skardi-skills](https://github.com/Skar
 
 ## Architecture
 
-<p align="center"><img src="/img/skardi-architecture.png" alt="Skardi Architecture" width="800" /></p>
+<p align="center"><img src="/skardi-docs/img/skardi-architecture.png" alt="Skardi Architecture" width="800" /></p>
