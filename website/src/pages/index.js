@@ -5,12 +5,15 @@ import Layout from '@theme/Layout';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx(styles.heroBanner)}>
       <div className="container">
         <img src="/skardi-docs/img/logo.png" alt="Skardi" className={styles.heroLogo} />
-        <p className={styles.heroTagline}>{siteConfig.tagline}</p>
+        <p className={styles.heroTagline}>
+          Spark for Agents — a data platform that gives AI agents full data autonomy
+          <br />
+          so every dataset in your stack becomes something an agent can actually use.
+        </p>
         <div className={styles.buttons}>
           <Link className={clsx('button button--lg', styles.btnPrimary)} to="/docs/intro">
             Get Started
