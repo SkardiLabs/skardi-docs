@@ -4,7 +4,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Skardi',
-  tagline: 'SQL across anything: query, join, and aggregate over local files, databases, S3, and vector stores — or turn any SQL into a parameterized HTTP API, zero application code required, written in Rust, powered by Apache Datafusion.',
+  tagline: 'Spark for Agents — a data platform that gives AI agents full data autonomy so every dataset in your stack becomes something an agent can actually use.',
   favicon: 'img/logo.svg',
 
   future: {
@@ -33,11 +33,14 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           editUrl: 'https://github.com/SkardiLabs/skardi/tree/main/website/',
-          lastVersion: '0.2.0',
+          lastVersion: '0.3.0',
           versions: {
             current: {
               label: 'Next',
               path: 'next',
+            },
+            '0.3.0': {
+              label: '0.3.0',
             },
             '0.2.0': {
               label: '0.2.0',
