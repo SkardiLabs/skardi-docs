@@ -49,6 +49,27 @@ helper (`analytics.js`) → PostHog → self-hosted instance. PostHog is initial
 `opt_out_capturing_by_default: true`; nothing is sent before consent. On accept, PostHog
 sets its persistent cookie, enabling cross-visit user journeys.
 
+### Where the trackers live (and why pages need no changes)
+
+No tracking code is ever placed on individual doc pages. Docusaurus is a single-page
+app — one JavaScript bundle runs across all pages — so the trackers attach globally,
+in exactly one place (`analytics-client.js`), and automatically cover every page,
+current and future, across all doc versions:
+
+- **Pageviews:** the `onRouteDidUpdate` lifecycle hook fires on every navigation to
+  any page; no page participates in its own tracking.
+- **Code copies & outbound clicks:** a single delegated click listener on `document`.
+  Clicks bubble up, so a copy button or external link anywhere on any page — including
+  docs written after this ships — is caught by the same listener.
+- **Scroll depth:** one observer that re-measures the doc content container on each
+  route change.
+
+Consequently, "where to put the tracking points" is defined by **event type** (the
+taxonomy below), not by page location. Adding a new doc page requires nothing; only
+adding a new *kind* of event (e.g. search tracking) requires touching the analytics
+code. Conversely, only the five events below are captured — this is not
+session-recording or capture-everything instrumentation.
+
 **Configuration:** PostHog project API key and API host (the self-hosted instance URL)
 live in `docusaurus.config.js` under `customFields.posthog = { apiKey, apiHost }`.
 Docs-site keys are public by nature; no secret handling is required. If `apiKey` is
