@@ -17,7 +17,7 @@ polled by run id (the write path agents use to commit durable results).
 somewhere you can query again later.
 
 
-[docs/agent_data_plane.md § Trust the agent, but make writes safe](/docs/agent-data-plane)
+[Why one engine](./agent-data-plane)
 for the design rationale.
 
 ---

@@ -1,11 +1,11 @@
 ---
 sidebar_position: 7
-title: Agent Data Plane
+title: Why One Engine
 ---
 
-# Why an Agent Data Plane
+# Why everything goes through one engine
 
-> Data autonomy is the point of an agent loop. Three primitives — semantics, lineage, snapshot-as-branch — are what keep autonomy from being reckless. They only compose at a chokepoint, and a uniform data plane is that chokepoint.
+> Data autonomy is the point of an agent loop. Three primitives — semantics, lineage, snapshot-as-branch — are what keep autonomy from being reckless. They only compose at a chokepoint, and one engine in front of every source is that chokepoint.
 
 ## The thesis in one page
 
@@ -19,7 +19,7 @@ Skardi's bet is that three primitives are enough to bound it:
 2. **Lineage** — every action is attributable to who, what, when, and against which source, queryable from one ledger.
 3. **Snapshot-as-branch** — destructive actions land in a branch the human reviews, with `git checkout`-like semantics for revert.
 
-These primitives only compose at a chokepoint. With direct SDKs the agent talks to N stores through N libraries, and there is no single layer at which any one of these can be implemented — the semantic catalog fragments, the audit trail scatters across log files, and atomic snapshots across sources are unreachable. With a uniform data plane there is one place to instrument all three.
+These primitives only compose at a chokepoint. With direct SDKs the agent talks to N stores through N libraries, and there is no single layer at which any one of these can be implemented — the semantic catalog fragments, the audit trail scatters across log files, and atomic snapshots across sources are unreachable. With one engine in front of everything there is one place to instrument all three.
 
 That is what Skardi is. Federation, declarative SQL pipelines, REST + shell + (soon) MCP bindings — those are how the plane is *built*. Governance is what the plane is *for*.
 
@@ -30,7 +30,7 @@ flowchart TB
         yaml["Pipeline / job YAMLs<br/>declare what's callable"]
     end
 
-    subgraph dp["Data plane — Skardi"]
+    subgraph dp["Skardi"]
         skardi["Federated SQL engine (DataFusion)<br/>+ semantics overlay<br/>+ lineage (run ledger)<br/>+ snapshot-as-branch"]
     end
 
@@ -205,7 +205,7 @@ Be honest about where this sits: of the three primitives, this is the most aspir
 
 ## Why a uniform plane is the architectural prerequisite
 
-Each of the three primitives above has the same property: it works at *one* layer or it doesn't work. That is not aesthetic — it is what makes a uniform data plane the architectural prerequisite, not just one of several reasonable shapes.
+Each of the three primitives above has the same property: it works at *one* layer or it doesn't work. That is not aesthetic — it is what makes one uniform engine the architectural prerequisite, not just one of several reasonable shapes.
 
 **Semantic overlay needs a single discovery surface.** N SDKs means N catalogs the agent has to learn about, each in its own dialect (SQL `INFORMATION_SCHEMA`, MongoDB collection lists, vector store index metadata, REST endpoint documentation). The agent has no place to find "the description of every table I can touch" because there is no "every." With one plane, `GET /data_source` is the single answer.
 
@@ -221,7 +221,7 @@ On the "behind your usual auth" half: Skardi ships drop-in session auth via [bet
 
 ---
 
-## What an agent data plane is not
+## What this is not
 
 A few comparisons that sound similar but are deliberately off-mission:
 

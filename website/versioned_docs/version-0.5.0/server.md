@@ -18,7 +18,7 @@ Both surfaces share the same context file (data sources + access mode +
 caching), the same YAML envelope, and the same HTTP listener. This page covers the
 shared server concerns; the per-surface reference lives in
 [pipelines.md](/docs/pipelines) and [jobs.md](/docs/jobs). For the broader
-story, see [agent_data_plane.md](/docs/agent-data-plane).
+story, see [Why one engine](./agent-data-plane).
 
 ---
 
@@ -244,4 +244,4 @@ on that source, from pipelines and jobs alike.
 - **[Jobs](/docs/jobs)** — YAML shape, destinations, run ledger, and cancellation for the offline-batch side.
 - **[Semantics](/docs/features/semantics)** — natural-language descriptions on tables and columns; the agent-facing catalog overlay.
 - **[CLI](/docs/cli)** — `skardi run`, aliases, federated SQL from the shell.
-- **[Why an agent data plane](/docs/agent-data-plane)** — why the data plane is shaped this way.
+- **[Why one engine](./agent-data-plane)** — why it is shaped this way.

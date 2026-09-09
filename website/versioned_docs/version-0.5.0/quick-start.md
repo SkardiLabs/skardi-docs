@@ -157,7 +157,7 @@ Full reference:
 - **Pipelines (online serving)** — [docs/pipelines.md](/docs/pipelines)
 - **Jobs (offline batch)** — [docs/jobs.md](/docs/jobs)
 - **Table descriptions for agent discovery** — [docs/semantics.md](/docs/features/semantics)
-- **Background — design intent** — [docs/agent_data_plane.md](/docs/agent-data-plane)
+- **Background — design intent** — [Why one engine](./agent-data-plane)
 
 ## Next Steps
 

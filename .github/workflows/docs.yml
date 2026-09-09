@@ -23,9 +23,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Fetch README from main skardi repo
-        run: |
-          curl -fsSL https://raw.githubusercontent.com/SkardiLabs/skardi/main/README.md -o README.md
+      # The current docs version is generated from the skardi repo, so the
+      # build needs README + docs/ + demo/ + asset/, not just the README.
+      # Cone mode also brings the root files, README.md among them.
+      - name: Check out skardi (docs source)
+        uses: actions/checkout@v4
+        with:
+          repository: SkardiLabs/skardi
+          path: skardi-src
+          sparse-checkout: |
+            docs
+            demo
+            asset
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -41,6 +50,8 @@ jobs:
       - name: Build Docusaurus site
         run: npm run build
         working-directory: website
+        env:
+          SKARDI_ROOT: ${{ github.workspace }}/skardi-src
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

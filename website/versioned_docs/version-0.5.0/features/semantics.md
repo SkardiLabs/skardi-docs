@@ -283,4 +283,4 @@ The output is always pretty-printed JSON — `skardi schema` takes no flags.
 
 - **[Server](/docs/server)** — full flag reference and lifecycle.
 - **[Catalog mode](/docs/features/catalog)** — registering an entire database as a DataFusion catalog.
-- **[Spark for Agents](/docs/agent-data-plane)** — why this primitive exists.
+- **[Why one engine](../agent-data-plane)** — why this primitive exists.

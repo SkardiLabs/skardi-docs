@@ -102,3 +102,11 @@
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Light/dark image pairs emitted by scripts/generate-docs.mjs from the
+   README's <picture> blocks. Docusaurus always stamps data-theme, so one
+   rule per theme is enough. */
+[data-theme='dark'] .themedImage--light,
+[data-theme='light'] .themedImage--dark {
+  display: none;
+}

@@ -4,7 +4,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Skardi',
-  tagline: 'An agent data plane that gives AI agents data autonomy — federated SQL, retrieval primitives, and parameterized pipelines over every dataset in your stack.',
+  tagline: 'An open-source self-improving context framework. Let your agent query any of your data, declaring why it asks, so the intentions that keep coming back become named tools and standing routines.',
   favicon: 'img/logo.svg',
 
   future: {
@@ -32,15 +32,28 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl: 'https://github.com/SkardiLabs/skardi/tree/main/website/',
-          lastVersion: '0.5.0',
+          // No site-wide editUrl. It pointed at skardi/website/, a path that
+          // has never existed in that repo, so every "Edit this page" link
+          // 404'd. Generated pages carry their own custom_edit_url pointing at
+          // the file they came from; frozen snapshots are not meant to be
+          // edited and so get no link at all.
+          // The site tracks main. Tagged releases stay reachable in the
+          // version dropdown; main is what a visitor lands on, so the docs
+          // match the README rather than the last release.
+          lastVersion: 'current',
           versions: {
             current: {
-              label: 'Next',
-              path: 'next',
+              label: 'main',
+              path: '',
+              banner: 'none',
             },
             '0.5.0': {
               label: '0.5.0',
+              // Docusaurus banners every non-latest version as "no longer
+              // actively maintained". 0.5.0 is the current release — the
+              // version people are actually running — so that warning would
+              // be wrong. Older tags keep the default banner.
+              banner: 'none',
             },
             '0.4.0': {
               label: '0.4.0',

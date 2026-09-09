@@ -10,9 +10,10 @@ function HomepageHeader() {
       <div className="container">
         <img src="/skardi-docs/img/logo.png" alt="Skardi" className={styles.heroLogo} />
         <p className={styles.heroTagline}>
-          Spark for Agents — a data platform that gives AI agents full data autonomy
+          An open-source self-improving context framework.
           <br />
-          so every dataset in your stack becomes something an agent can actually use.
+          Let your agent query any of your data, declaring why it asks, so the
+          intentions that keep coming back become named tools and standing routines.
         </p>
         <div className={styles.buttons}>
           <Link className={clsx('button button--lg', styles.btnPrimary)} to="/docs/intro">

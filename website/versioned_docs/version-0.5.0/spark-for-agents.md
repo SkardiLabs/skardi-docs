@@ -6,6 +6,7 @@ unlisted: true
 
 # Spark for Agents
 
-This page has been renamed to **[Agent Data Plane](/docs/agent-data-plane)**.
-
-The "Spark for Agents" framing is still the analogy the project leans on — one execution engine over every data source, the way Spark unified analytics over heterogeneous storage — but the canonical narrative now lives at the Agent Data Plane page. Older versions of the docs (`0.3.0` and below) still link to this page from their snapshots; this stub keeps those URLs resolvable.
+This page is gone. What it described — one execution engine over every data
+source, the way Spark unified analytics over heterogeneous storage — is now
+covered by [Why one engine](./agent-data-plane). Older doc snapshots (`0.3.0`
+and below) still link here, so this stub keeps those URLs resolvable.
